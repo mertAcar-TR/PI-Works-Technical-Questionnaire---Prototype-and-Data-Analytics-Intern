@@ -25,6 +25,8 @@ df["daily_vaccinations"].fillna(new_values,inplace=True)
 
 #Question 6
 biggest_top3_median=df.groupby("country")["daily_vaccinations"].median().sort_values(ascending=False).head(3)
-
+print("Top 3 Biggest Median:",biggest_top3_median)
 #Question 7
+print("\n")
 total_vaccination=df[df["date"]=="1/6/2021"]["daily_vaccinations"].sum()
+print(f"Total Vaccination on 1/6/21 is {total_vaccination}")
